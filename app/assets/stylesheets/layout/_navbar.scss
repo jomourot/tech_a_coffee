@@ -10,6 +10,11 @@
   justify-content: space-between;
 }
 
+.navbar-wagon p {
+  color: #07d187;
+  text-decoration: none !important;
+}
+
 .navbar-wagon i {
   color: #07d187;
   font-size: 35px;
@@ -27,8 +32,12 @@
 /* Navbar logo */
 .navbar-wagon-brand img {
   width: 50px;
+  display: inline-block;
 }
 
+.navbar-wagon-brand {
+  display: inline;
+}
 /* Navbar right section (with form, links, button) */
 .navbar-wagon-right {
   display: flex;
