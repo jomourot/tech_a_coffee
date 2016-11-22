@@ -214,6 +214,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  multipart-post (>= 1.2, < 3)
   autoprefixer-rails
   better_errors
   binding_of_caller
