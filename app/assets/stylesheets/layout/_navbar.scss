@@ -10,6 +10,11 @@
   justify-content: space-between;
 }
 
+.navbar-wagon i {
+  color: #07d187;
+  font-size: 35px;
+}
+
 /* Optional class to fix the navbar on top */
 .navbar-wagon-fixed {
   position: fixed;
@@ -54,15 +59,15 @@
   padding: 0 20px;
   border-radius: 20em;
   line-height: 40px;
-  background-color: #D23333;
+  background-color: #07D187;
   color: white;
   font-size: 14px;
-  border: 2px solid #D23333;
+  border: 2px solid #06ad70;
 }
 .navbar-wagon-button:hover {
   color: white;
-  background: #D23333;
-  border-color: #ac2626;
+  background: #08b274;
+  border-color: #06ad70;
 }
 
 /* Navbar search form */
