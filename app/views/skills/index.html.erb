@@ -1,0 +1,20 @@
+<!-- condition d'afichage selon les résultats trouvés -->
+
+<% if @found %>
+  <h4>these people are experienced in <%= @skill %></h4>
+<% else %>
+  <h4>Sorry, we did not find any people experienced in <%= @skill %></h4>
+<% end %>
+
+<!-- itération sur les users -->
+<% @skills.each do |skill| %>
+
+  <div>
+    <ul class="list-unstyled">
+      <li><%= skill.user.email%></li>
+      <li><%= skill.description %></li>
+    </ul>
+  </div>
+
+
+<% end %>
