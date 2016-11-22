@@ -13,16 +13,15 @@
     <div class="navbar-wagon">
       <!-- Logo -->
       <%= link_to root_path, class: "navbar-wagon-brand" do %>
-        <i class="fa fa-coffee"></i>
-        <p class="company-name">Tech A Coffee</p>
+        <%= image_tag "coffee.svg", class: "logo" %>
       <% end %>
 
       <!-- Right Navigation -->
       <div class="navbar-wagon-right hidden-xs hidden-sm">
 
         <!-- Button (call-to-action) -->
-        <a href="" class="navbar-wagon-item navbar-wagon-button btn">Sign In</a>
-        <a href="" class="navbar-wagon-item navbar-wagon-button btn">Sign Up</a>
+        <%= link_to "Sign in", new_user_session_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+        <%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
       </div>
 
       <!-- Dropdown appearing on mobile only -->
