@@ -16,15 +16,17 @@
         </form>
       </div>
     </div>
-      <div class="padding"></div>
-      <% @skills.each do |skill| %>
+    <div class="padding"></div>
+    <% @skills.each do |skill| %>
+      <%= link_to user_path(skill.user) do %>
         <div class="item_list">
           <ul class="list-unstyled">
-            <h6><strong><%= skill.user.first_name%> <%= skill.user.last_name %></strong></h6>
+            <h6><strong><%= skill.user.first_name %> <%= skill.user.last_name %></strong></h6>
             <li><%= skill.description %></li>
             <li>Je suis disponible au <%= skill.meeting_point %></li>
           </ul>
         </div>
+        <% end %>
       <% end %>
     </div>
     <div class="col-xs-4" id ="map" style="width: 50%; height: 500px;"></div>
@@ -46,3 +48,4 @@
       <% end %>
     <% end %>
 </div>
+
