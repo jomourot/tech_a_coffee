@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
+gem "coffee-rails"
+gem "gmaps4rails"
+gem 'geocoder'
 gem 'devise'
 gem 'rails', '5.0.0.1'
 gem 'puma'
