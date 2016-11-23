@@ -1,9 +1,20 @@
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-<%= @user.email %>
-<%= @skill.description  %>
+<h2>Description</h2>
 
 <%= simple_form_for [@user, @booking] do |f| %>
-  <%= f.input :starts_at, as: :datetime, discard_minute: true%>
+  <div class="input-group date" data-provide="datepicker">
+    <input type="text" class="form-control">
+    <div class="input-group-addon">
+      <span class="glyphicon glyphicon-th"></span>
+    </div>
+  </div>
   <%= f.input :duration, placeholder: "Number of minutes", label: false, collection: [30, 60, 90, 120] %>
   <%= f.button :submit %>
 <% end %>
+
+
+
+
+
+
+
