@@ -17,24 +17,17 @@
       </div>
     </div>
     <div class="padding"></div>
-      <% @skills.each do |skill| %>
-        <div class="item_list">
-          <ul class="list-unstyled">
-            <h6><strong><%= skill.user.first_name%> <%= skill.user.last_name %></strong></h6>
-            <li><%= skill.description %></li>
-            <li>Je suis disponible au <%= skill.meeting_point %></li>
-          </ul>
-        </div>
-      <% end %>
-    </div>
+    <% @skills.each do |skill| %>
+      <div class="item_list">
+        <ul class="list-unstyled">
+          <h6><strong><%= skill.user.first_name%> <%= skill.user.last_name %></strong></h6>
+          <li><%= skill.description %></li>
+          <li>Je suis disponible au <%= skill.meeting_point %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
   <div class="col-xs-4">
     <h1>ici la carte</h1>
   </div>
 </div>
-
-<!-- itération sur les users -->
-
-
-
-
-
