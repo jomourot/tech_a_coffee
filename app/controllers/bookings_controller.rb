@@ -1,17 +1,18 @@
 class BookingsController < ApplicationController
   def create
-    @user = User.find(params[:user_id])
     @booking = Booking.new(booking_params)
-    @booking.user = @booking
+    @booking.user = current_user
+
     if @booking.save
-      redirect_to new_skill_user_booking_path(@user)
+      redirect_to user_booking_path user_id: current_user.id, id: @booking.id
     else
-      render "user/show"
+      render "users/show"
     end
   end
 
   private
+
   def booking_params
-    params.require(:booking).permit(:starts_at, :duration, :accepted, :skill_id, :user_id)
+    params.require(:booking).permit(:starts_at, :duration, :accepted, :skill_id, :user_id, :booking_id)
   end
 end

@@ -1,11 +1,8 @@
-
-<% @users.each do |user| %>
-<h1><%= user.first_name %> <%= user.last_name %></h1>
-<% user.email %>
-<% end %>
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<% @user.email %>
 
 <%= simple_form_for [@user, @booking] do |f| %>
-<%= f.input :starts_at, as: :datetime, discard_minute: true%>
-<%= f.input :duration, placeholder: "Number of hours", label: false, collection: [30, 60, 90, 120] %>
-<%= f.button :submit%>
+  <%= f.input :starts_at, as: :datetime, discard_minute: true%>
+  <%= f.input :duration, placeholder: "Number of minutes", label: false, collection: [30, 60, 90, 120] %>
+  <%= f.button :submit %>
 <% end %>

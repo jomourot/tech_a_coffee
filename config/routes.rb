@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :skills
 
   resources :users do
-    resources :bookings, only: [ :show, :new, :create ]
+    resources :bookings, only: [ :show, :new, :create, :index ]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
