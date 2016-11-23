@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     @user = User.find(params[:user_id])
     @booking.user = @user
     if @booking.save
-      redirect_to user_booking_path(@user)
+      redirect_to user_booking_path(@user, @booking)
     else
       render "users/show"
     end

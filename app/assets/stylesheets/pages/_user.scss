@@ -1,5 +1,18 @@
 .user {
-  height: 100px;
+  height: 30vh;
   width: 100%;
-  background-color: grey;
+  background-color: #07d187;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
+
+.user h1 {
+  margin-left: 10px;
+}
+
+.avatar-large {
+  padding: 5px;
+}
+
