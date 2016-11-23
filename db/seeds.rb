@@ -5,9 +5,6 @@ bapt.save!
 jo = User.new(email:"user4@gmail.com", password:"xxxxxx", first_name: "Jo", last_name:"Mourot")
 jo.save!
 
-
-
-
 a = Skill.new(name: "seo", description: "j'ai travaillé dendant deux ans dans une agence Seo", meeting_point: "16 villa gaudelet", price:1, user_id: bapt.id)
 a.save!
 

@@ -12,7 +12,30 @@ class SkillsController < ApplicationController
     end
   end
 
+
+
+  def new
+
+    @skill = Skill.new
+
+  end
+
+  def create
+
+  end
+
+
+
+
+
+
+
+
+
+
 end
+
+
 
 
 
