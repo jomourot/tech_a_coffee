@@ -1,0 +1,5 @@
+<%= simple_form_for [@user, @booking] do |f| %>
+  <%= f.input :starts_at, as: :datetime, discard_minute: true%>
+  <%= f.input :duration, placeholder: "Duration", label: false, collection: [30, 60, 90, 120] %>
+  <%= f.button :submit %>
+<% end %>
