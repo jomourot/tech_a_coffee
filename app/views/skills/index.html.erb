@@ -1,20 +1,33 @@
 <!-- condition d'afichage selon les résultats trouvés -->
-
-<% if @found %>
-  <h4>these people are experienced in <%= @skill %></h4>
-<% else %>
-  <h4>Sorry, we did not find any people experienced in <%= @skill %></h4>
-<% end %>
+<div class="container">
+    <div class="col-xs-6">
+        <% if @found %>
+          <h4>these people are experienced in <%= @skill %></h4>
+        <% else %>
+          <h4>Sorry, we did not find any people experienced in <%= @skill %></h4>
+        <% end %>
+        <div class="padded"></div>
+        <% @skills.each do |skill| %>
+      <div class="item_list">
+          <ul class="list-unstyled">
+            <li><%= skill.user.email%></li>
+            <li><%= skill.description %></li>
+          </ul>
+      <% end %>
+      </div>
+    </div>
+    </div>
 
 <!-- itération sur les users -->
-<% @skills.each do |skill| %>
+    <div class="col-xs-4">
 
-  <div>
-    <ul class="list-unstyled">
-      <li><%= skill.user.email %></li>
-      <li><%= skill.description %></li>
-    </ul>
+      <h1>ici la carte</h1>
+
+    </div>
+
   </div>
+</div>
 
 
-<% end %>
+
+
