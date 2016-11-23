@@ -20,7 +20,7 @@
           <%= link_to user_path(skill.user) do %>
           <div class="item_list">
             <ul class="list-unstyled">
-              <li>dsggdsgs</li>
+              <li><%= skill.user.first_name %> <%= skill.user.last_name %></li>
               <li><%= skill.description %></li>
             </ul>
           </div>
