@@ -1,7 +1,7 @@
-bapt = User.new(email:"user3@gmail.com", password:"xxxxxx", first_name: "Bapt", last_name:"Saint-Aubin")
+bapt = User.new(email:"user6@gmail.com", password:"xxxxxx", first_name: "Bapt", last_name:"Saint-Aubin")
 bapt.save!
 
-jo = User.new(email:"user4@gmail.com", password:"xxxxxx", first_name: "Jo", last_name:"Mourot")
+jo = User.new(email:"user5@gmail.com", password:"xxxxxx", first_name: "Jo", last_name:"Mourot")
 jo.save!
 
 a = Skill.new(name: "seo", description: "j'ai travaillé dendant deux ans dans une agence Seo", meeting_point: "16 villa gaudelet Paris", price:1, user_id: bapt.id)
