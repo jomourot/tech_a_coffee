@@ -19,9 +19,22 @@
 .item_list {
   border: 1px solid black;
   background-color: gray;
+  margin-bottom: 5px;
+  border-radius: 3px;
+
 }
 
 
 .padded {
   margin-top: 10px;
+}
+
+
+.top {
+  border: 1px solid #DDDDDD;
+}
+
+
+.padding {
+  margin-top: 20px;
 }
