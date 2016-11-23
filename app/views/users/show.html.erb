@@ -1,5 +1,6 @@
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-<% @user.email %>
+<%= @user.email %>
+<%= @skill.description  %>
 
 <%= simple_form_for [@user, @booking] do |f| %>
   <%= f.input :starts_at, as: :datetime, discard_minute: true%>
