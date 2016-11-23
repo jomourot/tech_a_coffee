@@ -1,42 +1,33 @@
 <!-- condition d'afichage selon les résultats trouvés -->
 <div class="container">
-    <div class="col-xs-6">
-      <div class="top">
-
-          <% if @found %>
-            <h4>these people are experienced in <%= @skill %></h4>
-          <% else %>
-            <h4>Sorry, we did not find any people experienced in <%= @skill %></h4>
-            <h6 class="text-center">You can try a new request:</h6>
-              <form class="form-search" method="get" action="/skills">
-              <input type="text" name="name" placeholder="browse skills...">
-              <button type="submit">Modify</button>
-              <i class="fa fa-search"></i>
-              </form>
-          <% end %>
-        </div>
-        <div class="padding"></div>
-        <% @skills.each do |skill| %>
-          <%= link_to user_path(skill.user) do %>
-          <div class="item_list">
-            <ul class="list-unstyled">
-              <li>dsggdsgs</li>
-              <li><%= skill.description %></li>
-            </ul>
-          </div>
-          <% end %>
-        <% end %>
+  <div class="col-xs-6">
+    <div class="top">
+      <% if @found %>
+        <h4 class="text-center">These people are experienced in <%= @skill.capitalize %></h4>
+      <% else %>
+        <h4 class="text-center">Sorry, we did not find any people experienced in <%= @skill.capitalize %></h4>
+      <% end %>
+      <h6 class="text-center">You can try a new request:</h6>
+      <div class="search">
+        <form class="form-search" method="get" action="/skills">
+        <input type="text" name="name" placeholder="browse skills...">
+        <button type="submit">Modify</button>
+        <i class="fa fa-search"></i>
+        </form>
+      </div>
     </div>
-</div>
-
-<!-- itération sur les users -->
-    <div class="col-xs-4">
-      <h1>ici la carte</h1>
-    </div>
-
+    <div class="padding"></div>
+    <% @skills.each do |skill| %>
+      <div class="item_list">
+        <ul class="list-unstyled">
+          <h6><strong><%= skill.user.first_name%> <%= skill.user.last_name %></strong></h6>
+          <li><%= skill.description %></li>
+          <li>Je suis disponible au <%= skill.meeting_point %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-xs-4">
+    <h1>ici la carte</h1>
   </div>
 </div>
-
-
-
-
