@@ -2,18 +2,27 @@
   margin-top: 20;
   margin-bottom: 30px;
   padding-top: 30px;
+  background-color: #e8eef2;
+  background-size: cover !important;
+  height: 50vh;
 }
 
 .features h2 {
-  color: #333333;
+  color: #4d626f;
   margin-top : 5px;
   margin-bottom: 5px;
   font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .features p {
-  color: #333333;
+  color: #4d626f;
   margin-bottom: 20px;
+  padding: 5px;
+  justify-text: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .features i {
@@ -21,3 +30,20 @@
   margin-bottom: 10px;
   color: #2ca24c;
 }
+
+.box-features {
+  background-color: white;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 1px 1px 1px #656565;
+  height: 240px;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+
+
