@@ -1,10 +1,15 @@
 .features {
-  margin-top: 20;
+  margin-top: 20px;
   margin-bottom: 30px;
   padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #e8eef2;
   background-size: cover !important;
-  height: 50vh;
+  height: 75%;
+}
+
+.features h1{
+  color: #4d626f;
 }
 
 .features h2 {
@@ -39,6 +44,7 @@
   box-shadow: 1px 1px 1px #656565;
   height: 240px;
   font-family: 'Raleway', sans-serif;
+  margin: 20px;
 }
 
 
