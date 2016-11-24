@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
 
   @user = current_user
   @bookings = current_user.bookings
-  @skill_user = find_user_id(@bookings)
+
   # @skilled_user = User.find(booking.skill_id).first_name
 
 
@@ -44,12 +44,6 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:starts_at, :duration, :accepted, :skill_id, :user_id, :booking_id)
   end
 
-  def find_user_id(bookings)
-    skill_user = []
-    bookings.each do |booking|
-      @bookings << User.find(booking.skill_id).first_name
-    end
-    skill_user
-  end
+
 end
 
