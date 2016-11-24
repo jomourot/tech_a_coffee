@@ -6,6 +6,7 @@
 
 
 
+
 <section class="wrapper">
   <ul class="tabs">
     <li class="active">My cofees</li>
@@ -18,7 +19,8 @@
       <div class="content__wrapper">
         <% @bookings.each do |booking| %>
         <ul class="list-unstyled text-center">
-          <li><h6>You have a cofee plan on <%= booking.starts_at %> during <%= booking.duration %></h6></li>
+          <li><h6>You have a cofee plan on <%= booking.starts_at %> during <%= booking.duration %>with <strong><%= User.find(booking.skill_id).first_name %></strong></h6></li>
+
 
 
         </ul>
