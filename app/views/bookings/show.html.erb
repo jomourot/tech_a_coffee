@@ -1,3 +1,22 @@
-<h1>Here are your Booking informations !</h1>
+<div class="wrapper">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3 text-center">
+      <div class="booking">
+        <h1> New Booking request </h1>
+        <p> For <%= @booking.starts_at %> </p>
+        <p> For <%= @booking.duration %> </p>
+      </div>
+      <div class="user-info">
+        <%= image_tag(@user.facebook_picture_url, class: "avatar-big") %>
+
+      </div>
+      <div class="btn btn-danger text-center">
+        <p> Send a message to get updates </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
