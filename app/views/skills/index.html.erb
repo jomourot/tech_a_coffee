@@ -20,7 +20,7 @@
       <div class="padding"></div>
         <div class="card">
           <% @skills.each do |skill| %>
-            <%= link_to user_path(skill.user) do %>
+            <%= link_to user_path(skill.user, skill_id: skill.id) do %>
               <div class="item_list">
                 <ul class="list-unstyled">
                   <h6><strong><%= skill.user.first_name %> <%= skill.user.last_name %></strong></h6>
