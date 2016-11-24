@@ -1,18 +1,36 @@
 .user {
   height: 30vh;
+  margin-bottom: 30px;
   width: 100%;
-  background-color: #07d187;
+  background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  background: linear-gradient(135deg, red, red 60%, blue);
 }
 
 .user h1 {
   margin-left: 10px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 .avatar-large {
   padding: 5px;
 }
 
+.booking {
+  border: 1px solid #1FBED5;
+  border-radius: 5px;
+  margin: 20px;
+  width: 500px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+
+.form-margin {
+  margin-bottom: 30px;
+}

@@ -1,12 +1,16 @@
-<%= simple_form_for [@user, @booking] do |f| %>
-  <div class="input-group date" data-provide="datepicker">
-    <input type="text" class="form-control">
-    <div class="input-group-addon">
-      <span class="glyphicon glyphicon-th"></span>
+<div class="booking">
+  <h2 class="text-center"> Let's meet !</h2>
+  <%= simple_form_for [@user, @booking] do |f| %>
+    <div class="input-group date" data-provide="datepicker">
+      <input type="text" class="form-control">
+      <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+      </div>
     </div>
-  </div>
-  <%= f.input :starts_at, as: :time %>
-  <%= f.input :duration, placeholder: "Number of minutes", collection: [30, 60, 90, 120] %>
-  <%= f.button :submit %>
-<% end %>
-
+    <div class="input-group">
+      <%= f.input :starts_at, as: :time %>
+      <%= f.input :duration, placeholder: "Number of minutes", collection: [30, 60, 90, 120] %>
+      <%= f.button :submit %>
+      <% end %>
+    </div>
+</div>
