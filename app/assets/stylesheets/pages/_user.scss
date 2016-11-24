@@ -3,15 +3,15 @@
   margin-bottom: 30px;
   width: 100%;
   background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
   color: white;
   background: linear-gradient(135deg, red, red 60%, blue);
 }
 
 .user h1 {
-  margin-left: 10px;
+  margin-top: 40px;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -20,14 +20,17 @@
 }
 
 .booking {
-  border: 1px solid #1FBED5;
-  border-radius: 5px;
-  margin: 20px;
-  width: 500px;
-  padding-right: 25px;
-  padding-left: 25px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  border-radius: 16px 16px;
+  border-color: #fff;
+  box-shadow: 2px 2px 10px #B1B1B1;
+  border-style: solid;
+  border-width: 7px;
+  background-color: #FFFFFF;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+  color: #4d626f;
+  height: 400px;
 }
 
 
