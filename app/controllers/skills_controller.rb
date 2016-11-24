@@ -1,7 +1,6 @@
 class SkillsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
-
   def index
     @skill = params[:name]
     required_skills =  Skill.where(name: params[:name])
