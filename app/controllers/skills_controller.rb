@@ -25,6 +25,37 @@ class SkillsController < ApplicationController
   end
 
 
+
+  def new
+    @skill = Skill.new
+
+  end
+
+  def create
+    @skill = Skill.new(skill_params)
+    @skill.user = current_user
+    if @skill.save
+      redirect_to skills_path
+    else
+      render :new
+    end
+  end
+
+
+private
+
+def skill_params
+ params.require(:skill).permit(:name, :description, :meeting_point, :price)
+
+end
+
+
+
+
+
+
+
+
 end
 
 
