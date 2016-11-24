@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
 
   end
->>>>>>> master
 end
 
 
