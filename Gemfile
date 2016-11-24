@@ -5,6 +5,8 @@ source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
 
+gem 'carrierwave'
+
 gem "coffee-rails"
 gem "gmaps4rails"
 gem 'geocoder'
