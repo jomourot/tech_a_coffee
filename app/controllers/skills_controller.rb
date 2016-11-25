@@ -45,15 +45,7 @@ private
 
 def skill_params
  params.require(:skill).permit(:name, :description, :meeting_point, :price)
-
 end
-
-
-
-
-
-
-
 
 end
 
