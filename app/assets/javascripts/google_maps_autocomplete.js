@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   if (skill_meeting_point) {
     var autocomplete = new google.maps.places.Autocomplete(skill_meeting_point, { types: ['geocode'] });
-    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+    // google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
     google.maps.event.addDomListener(skill_meeting_point, 'keydown', function(e) {
       if (e.keyCode == 13) {
         e.preventDefault(); // Do not submit the form on Enter.
