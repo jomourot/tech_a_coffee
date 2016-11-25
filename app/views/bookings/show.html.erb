@@ -11,9 +11,10 @@
         </div>
         <div class="col-xs-6">
           <p> <%= @booking.starts_at.strftime("%A %d %B %Y") %></p>
-          <h5> with <%= @booking.skill.meeting_point %> </h5>
+          <h5> at <%= @booking.skill.meeting_point %> </h5>
         </div>
       </div>
+          <%= link_to "Your dashboard", bookings_path, class:"btn btn-primary" %>
       <div class="col-xs-12">
 
       </div>
