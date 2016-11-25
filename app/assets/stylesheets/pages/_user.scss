@@ -28,12 +28,62 @@
   background-color: #FFFFFF;
   margin-top: 30px;
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 50px;
   color: #4d626f;
   height: 400px;
+  position: relative;
 }
 
+.booking i {
+  font-size: 40px;
+  color: #64afe9;
+  margin: auto;
+  position: absolute;
+  top: -35px;
+  background-color: white;
+  border-radius: 50%;
+  border: 10px solid white;
+  left: 200px;
+  right: 200px;
+}
+
+.booking-container {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding: 30px;
+  background-color: #e8eef2;
+  background-size: cover !important;
+  height: 75%;
+  position: absolute;
+  padding-top: 60px;
+}
+
+.meeting-title {
+  margin: -40px;
+}
+
+.meeting-title i {
+  font-size: 60px;
+  color: #64afe9;
+  position: relative;
+  top: -60px;
+  background-color: #fafafa;
+  border-radius: 50%;
+  border: 10px solid #fafafa;
+  margin: auto;
+}
 
 .form-margin {
   margin-bottom: 30px;
 }
+
+.round-btn {
+  border-radius: 50px;
+}
+
+.date-size {
+  width: 200px;
+  margin: auto;
+}
+
+
