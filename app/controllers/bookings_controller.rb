@@ -15,9 +15,9 @@ class BookingsController < ApplicationController
     @user = current_user
     @booker = @booking.user
     @booked = @booking.skill.user
-    # @skill = Skill.find(params[:skill_id])
-    # @skill = Skill.where.where.not(latitude: nil, longitude: nil)
-    @hash = Gmaps4rails.build_markers(@booking.skill) do |skill, marker|
+    @skill = Skill.find(params[:skill_id])
+    @skill = Skill.where.not(latitude: nil, longitude: nil)
+    @hash = Gmaps4rails.build_markers(@skill) do |skill, marker|
       marker.lat skill.latitude
       marker.lng skill.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })

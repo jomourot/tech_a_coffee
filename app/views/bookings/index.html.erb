@@ -16,21 +16,30 @@
 
   <ul class="tab__content">
     <li class="active">
-      <div class="content__wrapper">
-        <% @bookings.each do |booking| %>
-        <ul class="list-unstyled text-center">
-          <li><h6>You have a cofee plan on <%= booking.starts_at %> during <%= booking.duration %> minutes with <strong><%= User.find(booking.skill_id).first_name %></strong></h6></li>
-        </ul>
+      <%  if @bookings.any? %>
+          <% @bookings.each do |booking| %>
+        <div class="content__wrapper">
+          <ul class="list-unstyled text-center">
+            <li><h6>You have a cofee plan on <%= booking.starts_at %> during <%= booking.duration %> minutes with <strong><%= User.find(booking.skill_id).first_name %></strong></h6> at <%= Skill.find(booking.skill_id).meeting_point %></li>
+          </ul>
+        </div>
+          <% end %>
+      <% else %>
+          <h4>You don't have any bookings yet! <%= link_to "book your next cofee now!", skills_path, class:"btn btn-primary" %></h4>
         <% end %>
-      </div>
     </li>
     <li>
       <div class="content__wrapper">
         <ul>
+
         <% @skills.each do |skill| %>
-          <% skill.bookings.each do |booking| %>
-            <li><h6><%= booking.user.first_name %> wants to meet you! on <%= booking.starts_at %> during <%= booking.duration %> minutes</h6></li>
-          <% end %>
+          <% if skill.booking.any? %>
+            <% skill.bookings.each do |booking| %>
+              <li><h6><%= booking.user.first_name %> wants to meet you! on <%= booking.starts_at %> during <%= booking.duration %> minutes</h6></li>
+              <% end %>
+            <% else %>
+              <h4>Nobody wants to meet you!</h4>
+            <% end %>
         <% end %>
         </ul>
 
