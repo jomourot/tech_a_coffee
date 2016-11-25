@@ -15,7 +15,6 @@ class BookingsController < ApplicationController
     @user = current_user
     @booker = @booking.user
     @booked = @booking.skill.user
-    raise
     # @skill = Skill.find(params[:skill_id])
     # @skill = Skill.where.where.not(latitude: nil, longitude: nil)
     @hash = Gmaps4rails.build_markers(@booking.skill) do |skill, marker|
@@ -28,11 +27,19 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    year = params[:booking]['date(1i)'].to_i
+    month = params[:booking]['date(2i)'].to_i
+    day = params[:booking]['date(3i)'].to_i
+    hour = params[:booking]['date(4i)'].to_i
+    @booking.skill = Skill.find(params[:booking][:skill])
+    @booking.date = DateTime.new(year, month, day, hour)
+    @booking.starts_at = @booking.date.to_date
+    @booking.duration = params[:booking][:duration].to_i
     @booking.user = current_user
     if @booking.save
       redirect_to booking_path(@booking)
     else
-      render "bookings/new"
+      render "users/show"
     end
   end
 
@@ -78,7 +85,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:starts_at, :duration, :accepted, :skill_id, :user_id, :booking_id)
+    params.require(:booking).permit(:date, :starts_at, :duration, :accepted, :skill_id, :user_id, :booking_id)
   end
 
 
