@@ -1,20 +1,21 @@
-<div class="wrapper">
+<div class="container">
   <div class="row">
+    <div class="col-xs-6 booking-card text-center">
+      <div class="col-xs-12">
+        <h4> You requested a booking for skill : <%= @booking.skill.name.upcase %> </h4>
+      </div>
+      <div class="col-xs-12 booking-card-1 text-center ">
+        <div class="col-xs-6">
+          <%= image_tag(@booker.facebook_picture_url, class: "avatar-big", style: "margin-bottom: 10px;") %>
+          <h5> with <%= @booked.full_name %> </h5>
+        </div>
+        <div class="col-xs-6">
+          <p> <%= @booking.starts_at.strftime("%A %d %B %Y") %></p>
+          <h5> with <%= @booking.skill.meeting_point %> </h5>
+        </div>
+      </div>
+      <div class="col-xs-12">
 
-
-    <div class="col-xs-6 text-center booking ">
-      <div class="booking-info">
-        <h2> You requested a booking for : </h3>
-        <h3> <%= @booking.starts_at %> at <%= @booking.duration %> </h4>
-      </div>
-      <div class="booker">
-        <p> <%= @booker.full_name %> </p>
-      </div>
-      <div class="booked">
-        <p> <%= @booked.full_name %> </p>
-      </div>
-      <div class="btn btn-primary text-center">
-        <p> Send a message to get updates </p>
       </div>
     </div>
 
