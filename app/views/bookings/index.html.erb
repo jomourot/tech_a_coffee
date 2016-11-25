@@ -16,17 +16,17 @@
 
   <ul class="tab__content">
     <li class="active">
-      <%  if @bookings.any? %>
-          <% @bookings.each do |booking| %>
+      <% if @bookings.any? %>
+        <% @bookings.each do |booking| %>
         <div class="content__wrapper">
           <ul class="list-unstyled text-center">
-            <li><h6>You have a cofee plan on <%= booking.starts_at %> during <%= booking.duration %> minutes with <strong><%= User.find(booking.skill_id).first_name %></strong></h6> at <%= Skill.find(booking.skill_id).meeting_point %></li>
+            <li><h6>You have a cofee plan on <%= booking.starts_at %> during <%= booking.duration %> minutes with <strong><%= User.find(booking.skill.user_id).first_name %></strong></h6> at <%= Skill.find(booking.skill_id).meeting_point %></li>
           </ul>
         </div>
-          <% end %>
+        <% end %>
       <% else %>
           <h4>You don't have any bookings yet! <%= link_to "book your next cofee now!", skills_path, class:"btn btn-primary" %></h4>
-        <% end %>
+      <% end %>
     </li>
     <li>
       <div class="content__wrapper">
