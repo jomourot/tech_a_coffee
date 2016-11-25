@@ -1,0 +1,21 @@
+<div class="form-group">
+  <%= simple_form_for [@booking] do |f| %>
+    <div class="input-group date" data-provide="datepicker">
+      <input type="text" class="form-control">
+      <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+      </div>
+    </div>
+    <div class="input-group">
+
+      <%= f.input :starts_at, as: :time, :minute_step => 30 %>
+      <%= f.input :duration, placeholder: "Number of minutes", collection: [30, 60, 90, 120] %>
+      <%= f.input :skill_id, as: :hidden, :input_html => { :value => @skill.id} %>
+      <%= f.button :submit %>
+
+      <%= f.button :submit, class:"btn btn-primary text-center" %>
+
+      <% end %>
+    </div>
+</div>
+

@@ -6,7 +6,7 @@
       </div>
       <div class="col-xs-12 booking-card-1 text-center ">
         <div class="col-xs-6">
-          <%= image_tag(@booker.facebook_picture_url, class: "avatar-big", style: "margin-bottom: 10px;") %>
+          <%= image_tag(@booker.facebook_picture_url.nil? ? 'avatar.jpg' : @booker.facebook_picture_url, class: "avatar-big", style: "margin-bottom: 10px;") %>
           <h5> with <%= @booked.full_name %> </h5>
         </div>
         <div class="col-xs-6">
