@@ -6,15 +6,16 @@
       </div>
       <div class="col-xs-12 booking-card-1 text-center ">
         <div class="col-xs-6">
-          <%= image_tag(@booker.facebook_picture_url.nil? ? 'avatar.jpg' : @booker.facebook_picture_url, class: "avatar-big", style: "margin-bottom: 10px;") %>
+          <%= image_tag(@booked.facebook_picture_url.nil? ? 'avatar.jpg' : @booker.facebook_picture_url, class: "avatar-big", style: "margin-bottom: 10px;") %>
           <h5> with <%= @booked.full_name %> </h5>
         </div>
         <div class="col-xs-6">
-          <p> <%= @booking.starts_at.strftime("%A %d %B %Y") %></p>
-          <h5> at <%= @booking.skill.meeting_point %> </h5>
+          <p> <%= @booking.starts_at.strftime("%A %d %B %Y") %> @ <%= @booking.date.hour%>.<%=@booking.date.min %></p>
+          <p> Meeting Point : </p>
+          <p><strong><%= @booking.skill.meeting_point.upcase %></strong></p>
         </div>
       </div>
-          <%= link_to "Your dashboard", bookings_path, class:"btn btn-primary" %>
+          <%= link_to "Your dashboard", bookings_path, class:"btn btn-primary", style: "border-radius: 50px; margin-top: 5px" %>
       <div class="col-xs-12">
 
       </div>

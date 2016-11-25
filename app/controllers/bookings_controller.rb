@@ -30,8 +30,9 @@ class BookingsController < ApplicationController
     month = params[:booking]['date(2i)'].to_i
     day = params[:booking]['date(3i)'].to_i
     hour = params[:booking]['date(4i)'].to_i
+    minute = params[:booking]['date(5i)'].to_i
     @booking.skill = Skill.find(params[:booking][:skill])
-    @booking.date = DateTime.new(year, month, day, hour)
+    @booking.date = DateTime.new(year, month, day, hour, minute)
     @booking.starts_at = @booking.date.to_date
     @booking.duration = params[:booking][:duration].to_i
     @booking.user = current_user
