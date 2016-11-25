@@ -4,8 +4,11 @@ class BookingsController < ApplicationController
 
   @user = current_user
   @bookings = current_user.bookings
-  # @skilled_user = User.find(booking.skill_id).first_name
+  @skills = current_user.skills
+
   end
+  # @skilled_user = User.find(booking.skill_id).first_name
+
 
   def show
     @booking = Booking.find(params[:id])
@@ -32,6 +35,38 @@ class BookingsController < ApplicationController
       render "bookings/new"
     end
   end
+
+
+  def accepted
+    @booking = Booking.find(params[:id])
+    @booking.accepted = true
+    @booking.save
+    redirect_to bookings_path
+  end
+
+  def rejected
+    @booking = Booking.find(params[:id])
+    @booking.accepted = false
+    @booking.save
+    redirect_to bookings_path
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   # def my_bookings
